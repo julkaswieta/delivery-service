@@ -1,0 +1,54 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursework"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="Coursework.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="900">
+    <Grid>
+        <Label x:Name="lblAddCourier" Content="Add Courier" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblCourierName" Content="Name" HorizontalAlignment="Left" Margin="23,41,0,0" VerticalAlignment="Top" Height="26" FontSize="13"/>
+        <TextBox x:Name="txtCourierName" HorizontalAlignment="Left" Margin="23,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="13"/>
+        <Label x:Name="lblCourierType" Content="Type" HorizontalAlignment="Left" Margin="23,85,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <ComboBox x:Name="cmbCourierType" HorizontalAlignment="Left" Margin="23,111,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" RenderTransformOrigin="0.553,-0.49" FontSize="13">
+            <ComboBoxItem Content="Van"/>
+            <ComboBoxItem Content="Cycle"/>
+            <ComboBoxItem Content="Walking"/>
+        </ComboBox>
+        <Button x:Name="btnAddCourier" Content="Add Courier" HorizontalAlignment="Left" Margin="51,373,0,0" VerticalAlignment="Top" Height="30" Width="76" Click="btnAddCourier_Click" FontWeight="Bold" FontSize="13"/>
+        <Label x:Name="lblAllocateAreas" Content="Allocate Areas" HorizontalAlignment="Left" Margin="24,146,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="13"/>
+        <ListBox x:Name="listAreas" HorizontalAlignment="Left" Height="96" Margin="24,253,0,0" VerticalAlignment="Top" Width="130" FontSize="13"/>
+        <Button x:Name="btnAddArea" Content="Add" HorizontalAlignment="Left" Margin="60,210,0,0" VerticalAlignment="Top" Height="32" Width="46" Click="btnAddArea_Click" FontSize="13"/>
+        <ComboBox x:Name="cmbAreas" HorizontalAlignment="Left" Margin="23,174,0,0" VerticalAlignment="Top" Width="120" FontSize="13"/>
+        <Label x:Name="lblAddParcel" Content="Add Parcel" HorizontalAlignment="Left" Margin="197,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblPostcode1" Content="Postcode" HorizontalAlignment="Left" Margin="197,41,0,0" VerticalAlignment="Top" Height="26" FontSize="13"/>
+        <TextBox x:Name="txtPostcode" HorizontalAlignment="Left" Margin="197,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="13"/>
+        <Label x:Name="lblAddressee1" Content="Addressee" HorizontalAlignment="Left" Margin="197,85,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <Button x:Name="btnAddParcel" Content="Add Parcel" HorizontalAlignment="Left" Margin="219,201,0,0" VerticalAlignment="Top" Height="30" Width="76" Click="btnAddParcel_Click" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="txtAddressee" HorizontalAlignment="Left" Margin="197,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="13"/>
+        <Label x:Name="lblAddress" Content="Address " HorizontalAlignment="Left" Margin="197,133,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="197,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="13"/>
+        <GridSplitter HorizontalAlignment="Left" Height="434" Margin="172,0,0,0" VerticalAlignment="Center" Width="3" Background="#FFC2C0C0" FontSize="13"/>
+        <GridSplitter HorizontalAlignment="Left" Height="434" Margin="336,0,0,0" VerticalAlignment="Center" Width="3" Background="#FFC2C0C0"/>
+        <Label x:Name="lblTransferParcel" Content="Transfer Parcel" HorizontalAlignment="Left" Margin="197,253,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblPostcode" Content="Postcode" HorizontalAlignment="Left" Margin="197,284,0,0" VerticalAlignment="Top" Height="26" FontSize="13"/>
+        <Label x:Name="lblCourierID" Content="New Courier ID" HorizontalAlignment="Left" Margin="197,328,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <Button x:Name="btnTransferParcel" Content="Transfer" HorizontalAlignment="Left" Margin="219,388,0,0" VerticalAlignment="Top" Height="30" Width="76" Click="btnTransferParcel_Click" FontWeight="Bold" FontSize="13"/>
+        <ComboBox x:Name="cmbCourierID" HorizontalAlignment="Left" Margin="197,354,0,0" VerticalAlignment="Top" Width="120" FontSize="13"/>
+        <ComboBox x:Name="cmbPostcode" HorizontalAlignment="Left" Margin="197,310,0,0" VerticalAlignment="Top" Width="120" FontSize="13"/>
+        <Label x:Name="lblSummary" Content="Display Summary" HorizontalAlignment="Left" Margin="388,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnDisplaySummary" Content="Display" HorizontalAlignment="Left" Margin="430,56,0,0" VerticalAlignment="Top" Height="30" Width="76" Click="btnDisplaySummary_Click" FontWeight="Bold" FontSize="13"/>
+        <ListBox x:Name="listSummary" HorizontalAlignment="Left" Height="368" Margin="373,99,0,0" VerticalAlignment="Top" Width="189"/>
+        <ListBox x:Name="listCourierDeliveries" HorizontalAlignment="Left" Height="234" Margin="597,99,0,0" VerticalAlignment="Top" Width="269"/>
+        <Label x:Name="lblCourierDeliveries" Content="Courier Deliveries" HorizontalAlignment="Left" Margin="652,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnDisplayDeliveries" Content="Display" HorizontalAlignment="Left" Margin="760,56,0,0" VerticalAlignment="Top" Height="30" Width="76" Click="btnDisplayDeliveries_Click" FontWeight="Bold" FontSize="13"/>
+        <ComboBox x:Name="cmbCouriers" HorizontalAlignment="Left" Margin="627,60,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblCouriers" Content="Courier" HorizontalAlignment="Left" Margin="625,36,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblReadWrite" Content="Read/Write Data from/to File" HorizontalAlignment="Left" Margin="602,349,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnRead" Content="Read" HorizontalAlignment="Left" Margin="627,403,0,0" VerticalAlignment="Top" Height="30" Width="76" Click="btnRead_Click" FontWeight="Bold" FontSize="13"/>
+        <Button x:Name="btnWrite" Content="Write" HorizontalAlignment="Left" Margin="749,403,0,0" VerticalAlignment="Top" Height="30" Width="76" Click="btnWrite_Click" FontWeight="Bold" FontSize="13"/>
+
+    </Grid>
+</Window>
